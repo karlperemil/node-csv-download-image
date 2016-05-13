@@ -1,5 +1,5 @@
 var fs = require('fs');
-var  request = require('request');
+var request = require('request');
 var Converter = require('csvtojson').Converter;
 var converter = new Converter({delimiter:';'});
 
@@ -14,7 +14,7 @@ require('fs').createReadStream('./facebookbilder.csv').pipe(converter);
 var index = 0;
 var images = [];
 
-converter.fromFile("./facebookbilder.csv",function(err,result){
+converter.fromFile("./facebookbilder2.csv",function(err,result){
   console.log(result[0]);
   images = result;
   downloadImage();
